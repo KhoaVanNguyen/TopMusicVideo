@@ -97,6 +97,9 @@
 		D2BB98071D703298009A667A /* TopMusicVideo */ = {
 			isa = PBXGroup;
 			children = (
+				D2BB98381D703983009A667A /* Controller */,
+				D2BB98371D70397E009A667A /* Model */,
+				D2BB98361D70397B009A667A /* View */,
 				D2BB98081D703298009A667A /* AppDelegate.swift */,
 				D2BB980A1D703298009A667A /* ViewController.swift */,
 				D2BB980C1D703298009A667A /* Main.storyboard */,
@@ -123,6 +126,27 @@
 				D2BB982A1D703298009A667A /* Info.plist */,
 			);
 			path = TopMusicVideoUITests;
+			sourceTree = "<group>";
+		};
+		D2BB98361D70397B009A667A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		D2BB98371D70397E009A667A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D2BB98381D703983009A667A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -14,6 +14,7 @@
 		D2BB98131D703298009A667A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BB98111D703298009A667A /* LaunchScreen.storyboard */; };
 		D2BB981E1D703298009A667A /* TopMusicVideoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB981D1D703298009A667A /* TopMusicVideoTests.swift */; };
 		D2BB98291D703298009A667A /* TopMusicVideoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB98281D703298009A667A /* TopMusicVideoUITests.swift */; };
+		D2D28FEF1D70968A008FF19F /* APIManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D28FEE1D70968A008FF19F /* APIManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D2BB98241D703298009A667A /* TopMusicVideoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopMusicVideoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB98281D703298009A667A /* TopMusicVideoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMusicVideoUITests.swift; sourceTree = "<group>"; };
 		D2BB982A1D703298009A667A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D28FEE1D70968A008FF19F /* APIManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,6 @@
 				D2BB98371D70397E009A667A /* Model */,
 				D2BB98361D70397B009A667A /* View */,
 				D2BB98081D703298009A667A /* AppDelegate.swift */,
-				D2BB980A1D703298009A667A /* ViewController.swift */,
 				D2BB980C1D703298009A667A /* Main.storyboard */,
 				D2BB980F1D703298009A667A /* Assets.xcassets */,
 				D2BB98111D703298009A667A /* LaunchScreen.storyboard */,
@@ -138,6 +139,7 @@
 		D2BB98371D70397E009A667A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2D28FEE1D70968A008FF19F /* APIManger.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +147,7 @@
 		D2BB98381D703983009A667A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2BB980A1D703298009A667A /* ViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D28FEF1D70968A008FF19F /* APIManger.swift in Sources */,
 				D2BB980B1D703298009A667A /* ViewController.swift in Sources */,
 				D2BB98091D703298009A667A /* AppDelegate.swift in Sources */,
 			);
@@ -534,6 +538,7 @@
 				D2BB982F1D703298009A667A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2BB98301D703298009A667A /* Build configuration list for PBXNativeTarget "TopMusicVideoTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +547,7 @@
 				D2BB98321D703298009A667A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D2BB98331D703298009A667A /* Build configuration list for PBXNativeTarget "TopMusicVideoUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +556,7 @@
 				D2BB98351D703298009A667A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -25,9 +25,14 @@ class APIManger{
                         completion(result: error!.localizedDescription)
                     }
                 else{
-                        completion(result: "Successfully")
-                        print("********************************************")
-                        print(data)
+                    do {
+                        if let json =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String : AnyObject]{
+                            print(json)
+                             completion(result: "Successfully")
+                        }
+                    }catch{
+                        completion(result: "error")
+                    }
                     }
             }
         }

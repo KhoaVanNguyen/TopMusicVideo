@@ -9,34 +9,41 @@
 import Foundation
 import UIKit
 class APIManger{
-    
-    func loadData(url : String, completion : (result : String) -> () ){
-        
-        
+    func loadData(url : String, completion : (result : [MusicVideo]) -> () ){
         let config = URLSessionConfiguration.ephemeral
         let session = URLSession(configuration: config)
-        
         let url = URL(string: url)
         
         let task  = session.dataTask(with: url!){
             ( data, resonse, error) in
-            DispatchQueue.main.async {
+           
                 if error != nil{
-                        completion(result: error!.localizedDescription)
+                   print(error?.localizedDescription)
                     }
                 else{
-                    do {
-                        if let json =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String : AnyObject]{
-                            print(json)
-                             completion(result: "Successfully")
+                    var videos = [MusicVideo]()
+                    DispatchQueue.global().async {
+                        do {
+                        
+                       
+                        if let json =  try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? JSONDICTIONARY,
+                            let feed = json["feed"] as? JSONDICTIONARY,
+                            let entries = feed["entry"] as? JSONARRAY{
+                            for entry in entries{
+                                let video = MusicVideo(data: entry)
+                                videos.append(video)
+                                print(video.vName)
+                            }
+                           
                         }
-                    }catch{
-                        completion(result: "error")
+                    } catch{
+                            print(error.localizedDescription)
+                            }
                     }
-                    }
+                     completion(result: videos)
+                    
             }
-        }
-        task.resume()
-        
     }
+        task.resume()
+}
 }
